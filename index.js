@@ -1,5 +1,9 @@
-require("./config.json")
+const { Client, Collection, Discord } = require('discord.js');
+const fs = require('fs')
+const client = new Client({intents: 32767});
+const { token } = require("./config.json");
 
+const { prefix } = require("./config.json")
 
 client.commands = new Collection();
 client.aliases = new Collection();
